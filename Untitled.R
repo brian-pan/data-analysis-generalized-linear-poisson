@@ -1,3 +1,3 @@
 library(faraway)
-library(tidyverse)
 library(Pmisc)
+library(tidyverse)
