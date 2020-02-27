@@ -36,3 +36,13 @@ fijiGlm2 = glm(
   family = poisson(link = log), data = fijiSub)
 
 summary(fijiGlm2)
+
+# table 2
+rate2 = cbind(est = fijiGlm2$coef, confint(fijiGlm2, level = 0.95))
+knitr::kable(cbind(
+  summary(fijiGlm2)$coef,
+  exp(rate2)),
+  digits=2)
+
+# LRT
+lmtest::lrtest(fijiGlm2, fijiGlm)
