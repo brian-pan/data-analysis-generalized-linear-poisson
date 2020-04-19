@@ -43,6 +43,3 @@ knitr::kable(cbind(
   summary(fijiGlm2)$coef,
   exp(rate2)),
   digits=2)
-
-# LRT
-lmtest::lrtest(fijiGlm2, fijiGlm)
